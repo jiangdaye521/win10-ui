@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-    <title>WIN10-UI</title>
+    <title>在线WIN10桌面</title>
     <link rel='Shortcut Icon' type='image/x-icon' href='./img/windows.ico'>
     <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
     <link href="./css/animate.css" rel="stylesheet">
     <script type="text/javascript" src="./component/layer-v3.0.3/layer/layer.js"></script>
+				<script src="./js/jquery-2.2.4.min.js"></script>
+				<script src="./js/win10.child.js"></script>
     <link rel="stylesheet" href="./component/font-awesome-4.7.0/css/font-awesome.min.css">
     <link href="./css/default.css" rel="stylesheet">
     <script type="text/javascript" src="./js/win10.js"></script>
@@ -29,10 +31,17 @@
 
             //设置壁纸
             Win10.setBgUrl({
-                main: './img/wallpapers/main.jpg',
+                main: 'http://p4.qhimg.com/bdm/0_0_0/t012cde4a5058c156b7.jpg',
                 mobile: './img/wallpapers/mobile.jpg',
             });
 
+            setTimeout(function () {
+                Win10.newMsg('阿里云分享', '新老电影电影分享，还有各种图片图书，各类教程：<a style="color: #889EFF;" target="_blank" href="https://uusb.cf/">[点击进入]</a>')
+            }, 2500);
+
+            setTimeout(function () {
+                Win10.openUrl('https://uusb.cf/2021/12/07/%E5%BD%B1%E8%A7%86%E6%8E%A8%E8%8D%90/','<i class="fa fa-newspaper-o icon red"></i>最新资讯',[['300px', '70%'],'rt'])
+            },2000);
             Win10.setAnimated([
                 'animated flip',
                 'animated bounceIn',
@@ -43,7 +52,7 @@
 <body>
 <div id="win10">
     <div class="desktop">
-        <div id="win10-shortcuts" class="shortcuts-hidden">
+        <!-- <div id="win10-shortcuts" class="shortcuts-hidden">
             <div class="shortcut"
                  onclick="Win10.openUrl('http://win10ui.yuri2.cn',
                  '<img class=\'icon\' src=\'./img/icon/win10.png\'/>Win10-UI官网')">
@@ -54,7 +63,29 @@
                 <img class="icon" src="./img/icon/demo.png"/>
                 <div class="title">查看DEMO</div>
             </div>
-        </div>
+        </div> -->
+								<div id="win10-shortcuts">
+								     <div class="shortcut" onclick="Win10.openUrl('https://uusb.cf/', '<img class=\'icon\' src=\'https://q1.qlogo.cn/g?b=qq&nk=726817119&s=640\'/>江小白')">
+													<img class="icon" src="https://q1.qlogo.cn/g?b=qq&nk=726817119&s=640"/>
+								           <div class="title">江小白</div>
+								     </div>
+								     <div class="shortcut" onclick="Win10.openUrl('https://baidu8.github.io/bing/', '<img class=\'icon\' src=\'http://p6.qhimg.com/bdm/480_296_0/t01fe1969412afdeb74.jpg\'/>必应壁纸')">
+								           <img class="icon" src="http://p6.qhimg.com/bdm/480_296_0/t01fe1969412afdeb74.jpg"/>
+								           <div class="title">必应壁纸</div>
+								     </div>
+													<div class="shortcut" onclick="Win10.openUrl('https://www.weikanju.com/', '<img class=\'icon\' src=\'https://www.weikanju.com/File/favicon.ico\'/>微看剧')">
+													      <img class="icon" src="https://www.weikanju.com/File/favicon.ico"/>
+													      <div class="title">微看剧</div>
+													</div>
+													<div class="shortcut" onclick="Win10.openUrl('./html/video.html', '<img class=\'icon\' src=\'./img/icon/虎牙直播.svg\'/>周星驰电影24小时轮播')">
+													      <img class="icon" src="./img/icon/虎牙直播.svg"/>
+													      <div class="title">虎牙直播</div>
+													</div>
+													<div class="shortcut" onclick="Win10.openUrl('https://ps.gaoding.com/', '<img class=\'icon\' src=\'./img/icon/ps.ico\'/>在线ps')">
+													      <img class="icon" src="./img/icon/ps.ico"/>
+													      <div class="title">在线ps</div>
+													</div>
+								</div>
         <div id="win10-desktop-scene"></div>
     </div>
     <div id="win10-menu" class="hidden">
